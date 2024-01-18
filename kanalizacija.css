@@ -1,0 +1,808 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "ubuntu";
+  }
+  
+  
+  .banner {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("slika4.jpg");
+  }
+  @media screen and (max-width: 845px) {
+    .banner {
+    background-image: none;
+    }
+  }
+  header {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background: red;
+  }
+  
+  header .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .header-left .logo {
+    width: 120px;
+    border-radius: 50%;
+  }
+  
+  header .header-left nav {
+    margin-left: 50px;
+  }
+  
+  header .header-left nav ul {
+    display: flex;
+  }
+  
+  nav ul li a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 5px;
+    display: block;
+    background: red;
+    border-radius: 15px;
+    color: #030303;
+    font-size: 23px;
+    padding: 5px 10px;
+    transition: 0.2s;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: #fff;
+  }
+  
+  nav .social {
+    display: none;
+  }
+  
+  header .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .social {
+    color: #cfd9e0;
+    font-weight: bold;
+  }
+  
+  header .social a {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+    align-items: c;
+    color: black;
+    background: white;
+    padding: 15px 18px;
+    border-radius: 100%;
+  }
+  
+  header .header-right .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  header .header-right .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #fff;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    header {
+        padding: 0 20px;
+    }
+  
+    header .header-right .hamburger {
+        display: block;
+    }
+  
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: red;
+        padding: 6vw;
+        transition: 0.3s;
+        text-align: center;
+        z-index: 1;
+    }
+  
+    header .header-left nav.active {
+        top: 130px;
+    }
+  
+    header .header-left nav ul {
+        display: block;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    nav .social {
+        display: block;
+        margin-top: 20px;
+    }
+  
+    header .header-right .social {
+        display: none;
+    }
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 12px;
+  
+  
+  }
+   /* Style the button used to pause/play the video */
+   #myBtn {
+    border-radius: 10px;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  
+  .content2 {
+    width: 100%;
+    top: 35%;
+    color: #fff;
+  
+  }
+  
+  .content3 {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+  
+  }
+  
+  .content2 h1 {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    left: 45%;
+  
+  
+  }
+  
+  
+  .content2 p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1vw auto;
+    font-size: 27px;
+    font-weight: 100;
+    line-height: 30px;
+    left: 45%;
+    z-index: -1;
+  }
+  #onamabutton {
+    font-size: larger;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  #kontaktbutton {
+    font-size: larger;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid red;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  #sekcija1 {
+    width: 350px;
+    padding: 5px;   
+    font-size: 23px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid red;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #sekcija1:hover {
+    background-color: red;
+    border-radius: 25px;
+  }
+  
+  #sekcija2 {
+    width: 350px;
+    padding: 5px;   
+    font-size: 23px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 3px solid red;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #sekcija2:hover {
+    background-color: red;
+    border-radius: 25px;
+  }
+  
+  
+  span {
+    background: red;
+    height: 100%;
+    width: auto;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+  }
+  
+  button:hover span {
+    width: 100%;
+  }
+  
+  button:hover {
+    border: none;
+  
+  }
+  
+  .buttonnav {
+    margin: 25vw 0px 0px 38.5vw;
+  }
+  
+  footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    color: #fff;
+  }
+  
+  h1 {
+  
+    text-align: center;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #800000;
+    
+  }
+  
+  .dropdown {
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 23px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 10px 15px;
+    background-color: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 40%;
+    left: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content .header {
+    text-align: center;
+    font-size: 27px;
+    background: red;
+    padding: 16px;
+    color: #000;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 1200px) {
+    .column {
+        width: 100%;
+        height: auto;
+    }
+  }
+  .slika-mobile {
+    width: 100%;
+  }
+  @media screen and (min-width: 845px) {
+    .slika-mobile {
+        display: none;
+    }
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: white;
+  
+  }
+  
+  .navbar a {
+    font-size: 19px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .subnav {
+    overflow: hidden;
+  }
+  
+  .subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: red;
+  }
+  
+  .subnav-content {
+    display: none;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .subnav-content a {
+    float: right;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+  }
+  
+  .subnav:hover .subnav-content {
+    display: flex;
+  }
+  
+  /*popup produkt kartice*/
+  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+  
+  
+  
+  html{
+     font-size: 62.5%;
+     overflow-x: hidden;
+  }
+  
+  
+  
+  .container{
+     max-width: 1200px;
+     margin:0 auto;
+     padding:3rem 2rem;
+  }
+  
+  .container .title{
+     font-size: 3.5rem;
+     color:#444;
+     margin-bottom: 3rem;
+     text-transform: uppercase;
+     text-align: center;
+  }
+  
+  .container .products-container{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+     gap:2rem;
+  }
+  
+  .container .products-container .product{
+     text-align: center;
+     padding:3rem 2rem;
+     background: #fff;
+     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+     outline: .1rem solid red;
+     outline-offset: -1.5rem;
+     cursor: pointer;
+  }
+  
+  .container .products-container .product:hover{
+     outline: .2rem solid #222;
+     outline-offset: 0;
+  }
+  
+  .container .products-container .product img{
+     height: 25rem;
+  }
+  
+  .container .products-container .product:hover img{
+     transform: scale(.9);
+  }
+  
+  .container .products-container .product h3{
+     padding:.5rem 0;
+     font-size: 2rem;
+     color:#000;
+  }
+  
+  .container .products-container .product:hover h3{
+     color: red;
+  }
+  
+  .container .products-container .product .price{
+     font-size: 2rem;
+     color:black;
+  }
+  
+  .products-preview{
+     position: fixed;
+     top:0; left:0;
+     height: 100%;
+     width: 100%;
+     background: rgba(0,0,0,.8);
+     display: none;
+     align-items: center;
+     justify-content: center;
+  }
+  
+  .products-preview .preview{
+     display: none;
+     padding:2rem;
+     text-align: center;
+     background:rgb(31, 29, 29);;
+     position: relative;
+     margin:2rem;
+     width: 85%;
+     height: 85%;
+     border: solid;
+     border-color: red;
+     border-radius: 5%;
+  }
+  
+  .products-preview .preview.active{
+     display: inline-block;
+  }
+  
+  .products-preview .preview img{
+     height: 30rem;
+     border: solid;
+     border-color: red;
+     border-radius: 25%;
+     animation: ambientLight 5s infinite alternate;
+  }
+  
+  .products-preview .preview .fa-times{
+     position: absolute;
+     top:1rem; right:1.5rem;
+     cursor: pointer;
+     color: red;
+     font-size: 4rem;
+  }
+  
+  .products-preview .preview .fa-times:hover{
+     transform: rotate(90deg);
+  }
+  
+  .products-preview .preview h3{
+     color:white;
+     padding:.5rem 0;
+     font-size: 2.5rem;
+  }
+  
+  .products-preview .preview .stars{
+     padding:1rem 0;
+     font-size: 1.7rem;
+  }
+  
+  .products-preview .preview .stars i{
+     color:#fc0206;
+  }
+  
+  .products-preview .preview .stars span{
+     color:#999;
+  }
+  
+  .products-preview .preview p{
+     line-height: 1.5;
+     padding:1rem 0;
+     font-size: 1.6rem;
+     color:#777;
+  }
+  
+  .products-preview .preview .price{
+     padding:1rem 0;
+     font-size: 2.5rem;
+     color:red;
+  }
+  
+  .products-preview .preview .buttons{
+     display: flex;
+     gap:1.5rem;
+     flex-wrap: wrap;
+     margin-top: 1rem;
+     height: auto ;
+     width: 10%;
+     border: solid red;
+     justify-items: center;
+     margin-left: 45%;
+  
+  }
+  
+  .products-preview .preview .buttons a{
+     flex:1 1 16rem;
+     padding:1rem;
+     font-size: 1.8rem;
+     color:#444;
+     border:.1rem solid red;
+     justify-content: center;
+  }
+  
+  .products-preview .preview .buttons a.cart{
+     background: #444;
+     color:#fff;
+  }
+  
+  .products-preview .preview .buttons a.cart:hover{
+     background: red;
+  }
+  
+  @media (max-width:991px){
+  
+     html{
+        font-size: 55%;
+     }
+  
+  }
+  
+  @media (max-width:768px){
+  
+     .products-preview .preview img{
+        height: 25rem;
+       
+     }
+  
+  }
+  
+  @media (max-width:450px){
+  
+     html{
+        font-size: 50%;
+     }
+  
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 20vw;
+    max-height: 5%;
+    overflow-y:auto;
+    animation: ambientLight 5s infinite alternate;
+   
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+    
+}
+
+th {
+    background-color: #ff0303;
+    font: bold;
+    font-size: x-large;
+    color: black;
+  
+}
+tr, td {
+    background-color: wheat;
+     color: black; 
+     font-size: medium;
+}
+
+ .scroll-container1 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .buttons-small {
+    display: flex;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    height: 7%;
+    width: 36%;
+    border: solid red;
+    justify-items: center;
+    margin-left: 45%;
+    background: #444;
+    color:#fff;
+    font-size: small;
+  }
+
+  .scroll-container2 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+  .scroll-container3 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .scroll-container4 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .scroll-container5 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .scroll-container6 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .scroll-container7 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+  .scroll-container8 {
+    border-collapse: collapse;
+    width: 100%;
+    padding-left: 0vw;
+    text-align: center;
+    animation: ambientLight 5s infinite alternate;
+    height: 200px; /* Postavite visinu ili širinu po potrebi */
+    overflow-y: auto; 
+  }
+
+ .scroll-container9 {
+  border-collapse: collapse;
+  width: 100%;
+  padding-left: 0vw;
+  text-align: center;
+  animation: ambientLight 5s infinite alternate;
+  height: 200px; /* Postavite visinu ili širinu po potrebi */
+  overflow-y: auto; 
+ }
+ 
+ h4 {
+  color: red;
+  font-size: medium;
+}
+
+  @keyframes ambientLight {
+    0%, 100% {
+        border-color: red; /* Početna boja okvira */
+        box-shadow: 0 0 100px rgba(79, 227, 222, 0.326); /* Početna boja svetla */
+    }
+    100% {
+        border-color: white; /* Srednja boja okvira */
+        box-shadow: 0 0 100px rgba(221, 5, 189, 0.5); /* Srednja boja svetla */
+    }
+  }
